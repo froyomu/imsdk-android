@@ -15,6 +15,9 @@ buildscript {
 
 allprojects {
     repositories {
+        flatDir {
+            dirs project(':lib_common').file('libs')
+        }
         google()
         jcenter()
         maven {
@@ -26,6 +29,9 @@ allprojects {
         mavenCentral()
         jcenter {
             url "http://jcenter.bintray.com/"
+        }
+        maven {
+            url "https://jitpack.io"
         }
     }
 }

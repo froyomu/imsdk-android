@@ -44,7 +44,7 @@ public class ThirdProviderAPI {
                         result = JsonUtils.getGson().fromJson(resultString
                                 , BaseJsonResult.class);
                         r = result != null && result.ret;
-                    } catch (Exception e) {
+                    } catch (IOException e) {
                         Logger.i("setServiceStatus->>",e.getLocalizedMessage());
                     }
 
@@ -81,7 +81,7 @@ public class ThirdProviderAPI {
                         Logger.i("getServiceStatus" + resultString);
                         SeatStatusResult statusResult = JsonUtils.getGson().fromJson(resultString,SeatStatusResult.class);
                         seatStatuses = statusResult.data;
-                    } catch (Exception e) {
+                    } catch (IOException e) {
                         LogUtil.e(TAG,"error",e);
                     }
                     callback.onCompleted(seatStatuses);

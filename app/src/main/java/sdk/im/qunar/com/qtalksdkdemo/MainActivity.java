@@ -15,7 +15,9 @@ import com.qunar.im.ui.activity.TabMainActivity;
 import com.qunar.im.ui.sdk.QIMSdk;
 
 
-
+/**
+ * 程序启动过度页面
+ */
 public class MainActivity extends Activity {
 
     private Button autoLoginButton,startPlatForm;

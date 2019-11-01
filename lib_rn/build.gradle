@@ -5,12 +5,16 @@ android {
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 25
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         ndk{
             abiFilters 'armeabi'
         }
+    }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
     }
     buildTypes {
         release {
@@ -26,9 +30,9 @@ android {
 }
 
 dependencies {
-    compile 'com.qunar.im:sdk-base:3.0.5'
-    compile 'com.qunar.im:sdk-common:3.0.5'//compile project(':lib_common')
-    compile 'com.qunar.im:sdk-push:3.0.5'
+    compile 'com.qunar.im:sdk-base:3.0.6'
+    compile project(':lib_common')
+    compile project(':lib_push')
     compile "io.sigpipe:jbsdiff:1.0"
     compile('com.facebook.react:react-native:0.54.4') {
 
