@@ -21,7 +21,7 @@
   ```
  ```step 4
   4.发送自定义消息
-  只需在ChatPresenter中定义一个方法,将IMMessage的MsgTyoe、Ext赋值
+  只需在ChatPresenter中定义一个方法,将IMMessage的MsgType、Ext赋值
   例如发送视频文件消息：
   public void sendVideo(VideoMessageResult videoMessageResult) {//videoMessageResult为ExtendInfo值
           IMMessage message = generateIMMessage();
