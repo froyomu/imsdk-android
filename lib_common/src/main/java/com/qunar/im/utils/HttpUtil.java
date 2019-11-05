@@ -337,7 +337,7 @@ public class HttpUtil {
 
         HttpUrlConnectionHandler.executeGet(requestUrl, new HttpRequestCallback() {
             @Override
-            public void onComplete(InputStream response) throws IOException {
+            public void onComplete(InputStream response){
                 try {
                     String resultString = Protocol.parseStream(response);
 
@@ -1985,7 +1985,7 @@ public class HttpUtil {
         String url = QtalkNavicationService.getInstance().getQcadminHost() + "/seat/getSeatList.json?shopId=" + jid;
         HttpUrlConnectionHandler.executeGet(url, new HttpRequestCallback() {
             @Override
-            public void onComplete(InputStream response) throws IOException {
+            public void onComplete(InputStream response){
                 String resultString = Protocol.parseStream(response);
                 SeatList seats = JsonUtils.getGson().fromJson(resultString, SeatList.class);
                 callback.onCompleted(seats);
@@ -2102,7 +2102,7 @@ public class HttpUtil {
         Protocol.addBasicParamsOnHead(sb);
         HttpUrlConnectionHandler.executeGet(sb.toString(), new HttpRequestCallback() {
             @Override
-            public void onComplete(InputStream response) throws IOException {
+            public void onComplete(InputStream response) {
                 String resultString = Protocol.parseStream(response);
                 callback.onCompleted(resultString);
             }
@@ -2688,7 +2688,7 @@ public class HttpUtil {
     public static void notifyOnline() {
         HttpUrlConnectionHandler.executeGet(Protocol.getUrl(QtalkNavicationService.getInstance().getQcadminHost(), "css/online"), new HttpRequestCallback() {
             @Override
-            public void onComplete(InputStream response) throws IOException {
+            public void onComplete(InputStream response) {
                 if (response != null) {
                     String resultString = Protocol.parseStream(response);
                     Logger.i("notifyOnline:" + resultString);

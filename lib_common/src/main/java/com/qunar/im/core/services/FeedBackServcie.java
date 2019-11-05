@@ -199,7 +199,7 @@ public class FeedBackServcie {
                                 }else {
                                     sendNotify(false);
                                 }
-                            } catch (IOException e) {
+                            } catch (Exception e) {
                                 sendNotify(false);
                             }
 

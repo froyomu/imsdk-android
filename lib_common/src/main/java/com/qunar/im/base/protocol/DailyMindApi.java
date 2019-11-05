@@ -91,7 +91,7 @@ public class DailyMindApi {
                         String qid = requestParams.get("qid");
                         unitCallback.onCompleted(qid);
                     }
-                } catch (IOException e) {
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
@@ -127,7 +127,7 @@ public class DailyMindApi {
                             unitCallback.onCompleted(dailyMindSub);
                         }
                     }
-                } catch (IOException e) {
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }

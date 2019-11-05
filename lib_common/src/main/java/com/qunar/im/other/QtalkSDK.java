@@ -351,7 +351,7 @@ public class QtalkSDK {
                 Logger.i("login-start" + isInterrupt);
             }
 
-        } catch (InterruptedException e) {
+        } catch (Exception e) {
             Logger.i("连接线程发生中断异常");
         } finally {
             /**

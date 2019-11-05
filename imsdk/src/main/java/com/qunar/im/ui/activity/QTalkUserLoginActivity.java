@@ -703,17 +703,17 @@ public class QTalkUserLoginActivity extends IMBaseLoginActivity implements View.
                         }
                     }
                 }else {
-                    if(LoginType.SMSLogin.equals(QtalkNavicationService.getInstance().getLoginType())){
-                        startActivity(new Intent(QTalkUserLoginActivity.this, LoginActivity.class));
-                        finish();
-                    }
+//                    if(LoginType.SMSLogin.equals(QtalkNavicationService.getInstance().getLoginType())){
+//                        startActivity(new Intent(QTalkUserLoginActivity.this, LoginActivity.class));
+//                        finish();
+//                    }
                 }
             }
         } else{
-            if(LoginType.SMSLogin.equals(QtalkNavicationService.getInstance().getLoginType())){
-                startActivity(new Intent(QTalkUserLoginActivity.this, LoginActivity.class));
-                finish();
-            }
+//            if(LoginType.SMSLogin.equals(QtalkNavicationService.getInstance().getLoginType())){
+//                startActivity(new Intent(QTalkUserLoginActivity.this, LoginActivity.class));
+//                finish();
+//            }
         }
     }
 

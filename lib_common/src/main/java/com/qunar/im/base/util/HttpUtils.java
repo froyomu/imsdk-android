@@ -35,7 +35,7 @@ public class HttpUtils {
                     try {
                         resultString = Protocol.parseStream(response);
                         LogUtil.d("debug", resultString);
-                    } catch (IOException e) {
+                    } catch (Exception e) {
                         LogUtil.e(TAG,"error",e);
                     }
                     try {

@@ -2815,8 +2815,6 @@ public class IMDatabaseManager {
             stat.executeUpdateDelete();
             db.setTransactionSuccessful();
 
-        } catch (InvalidProtocolBufferException e) {
-            e.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -3051,7 +3049,7 @@ public class IMDatabaseManager {
 
             stat.executeInsert();
             db.setTransactionSuccessful();
-        } catch (InvalidProtocolBufferException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         } finally {
             db.endTransaction();
@@ -3188,7 +3186,7 @@ public class IMDatabaseManager {
 
             db.setTransactionSuccessful();
 
-        } catch (InvalidProtocolBufferException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         } finally {
             db.endTransaction();
@@ -3859,8 +3857,6 @@ public class IMDatabaseManager {
             ustat.executeUpdateDelete();
 
             db.setTransactionSuccessful();
-        } catch (InvalidProtocolBufferException e) {
-            e.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -4064,7 +4060,7 @@ public class IMDatabaseManager {
 
             }
             db.setTransactionSuccessful();
-        } catch (InvalidProtocolBufferException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         } finally {
             db.endTransaction();

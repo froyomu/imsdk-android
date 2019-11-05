@@ -3431,7 +3431,7 @@ public class QimRNBModule extends ReactContextBaseJavaModule implements IMNotifi
     public void getDomainList(final Callback callback){
         HttpUtil.getDomainList(new HttpRequestCallback() {
             @Override
-            public void onComplete(InputStream response) throws IOException {
+            public void onComplete(InputStream response) {
                 WritableNativeMap map = new WritableNativeMap();
                 try{
                     String resultString = Protocol.parseStream(response);
@@ -3476,7 +3476,7 @@ public class QimRNBModule extends ReactContextBaseJavaModule implements IMNotifi
         params.put("limit",String.valueOf(limit));
         HttpUtil.searchDomainUser(url, params, new HttpRequestCallback() {
             @Override
-            public void onComplete(InputStream response) throws IOException {
+            public void onComplete(InputStream response) {
                 try{
                     String resultString = Protocol.parseStream(response);
                     WritableNativeMap map = new WritableNativeMap();

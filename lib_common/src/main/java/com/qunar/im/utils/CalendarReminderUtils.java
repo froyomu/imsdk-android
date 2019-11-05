@@ -76,7 +76,7 @@ public class CalendarReminderUtils {
             locan = TextUtils.isEmpty(bean.getAppointment())?bean.getTripLocale()+"-"+bean.getTripRoom():bean.getAppointment();
             start = DateUtil.string2Time(bean.getBeginTime(), "yyyy-MM-dd HH:mm:ss").getTime();
             end = DateUtil.string2Time(bean.getEndTime(), "yyyy-MM-dd HH:mm:ss").getTime();
-        } catch (ParseException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 //        String selection = "((" + CalendarContract.Events.ORIGINAL_SYNC_ID + " = ?))";
@@ -222,7 +222,7 @@ public class CalendarReminderUtils {
         try {
             start = DateUtil.string2Time(bean.getBeginTime(), "yyyy-MM-dd HH:mm:ss").getTime();
             end = DateUtil.string2Time(bean.getEndTime(), "yyyy-MM-dd HH:mm:ss").getTime();
-        } catch (ParseException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -311,7 +311,7 @@ public class CalendarReminderUtils {
         try {
             start = DateUtil.string2Time(bean.getBeginTime(), "yyyy-MM-dd HH:mm:ss").getTime();
             end = DateUtil.string2Time(bean.getEndTime(), "yyyy-MM-dd HH:mm:ss").getTime();
-        } catch (ParseException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

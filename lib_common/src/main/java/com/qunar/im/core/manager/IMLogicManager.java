@@ -924,7 +924,7 @@ public class IMLogicManager implements IMessageReceivedDelegate, IGroupEventRece
 //                    reConnection();
                     //                    这种方式抛出消息id
 //                    IMNotificaitonCenter.getInstance().postMainThreadNotificationName(ProtoMessageOuterClass.XmppMessage.parseFrom(message.getMessage()).getMessageId(), message);
-                } catch (InvalidProtocolBufferException ee) {
+                } catch (Exception ee) {
                     ee.printStackTrace();
                 }
 
@@ -943,7 +943,7 @@ public class IMLogicManager implements IMessageReceivedDelegate, IGroupEventRece
 //                reConnection();
                 //                    这种方式抛出消息id
 //                    IMNotificaitonCenter.getInstance().postMainThreadNotificationName(ProtoMessageOuterClass.XmppMessage.parseFrom(message.getMessage()).getMessageId(), message);
-            } catch (InvalidProtocolBufferException ee) {
+            } catch (Exception ee) {
                 ee.printStackTrace();
             }
         }
@@ -1331,7 +1331,7 @@ public class IMLogicManager implements IMessageReceivedDelegate, IGroupEventRece
 //
 //                    }
 
-                } catch (InvalidProtocolBufferException e) {
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
 
@@ -1632,9 +1632,7 @@ public class IMLogicManager implements IMessageReceivedDelegate, IGroupEventRece
                         }
                     }
 
-                } catch (InvalidProtocolBufferException e) {
-                    e.printStackTrace();
-                } catch (JSONException e) {
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
 
